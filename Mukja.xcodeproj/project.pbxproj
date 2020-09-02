@@ -19,15 +19,25 @@
 		AB069BA724F3609E001A777B /* MealPlannerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB069BA624F3609E001A777B /* MealPlannerView.swift */; };
 		AB069BA924F36119001A777B /* MealDetail.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB069BA824F36119001A777B /* MealDetail.swift */; };
 		AB069BAB24F36138001A777B /* MealStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB069BAA24F36138001A777B /* MealStore.swift */; };
-		AB069BAD24F476F1001A777B /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB069BAC24F476F1001A777B /* HomeView.swift */; };
 		AB069BAF24F47740001A777B /* TabBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB069BAE24F47740001A777B /* TabBar.swift */; };
+		AB1523EB24FF49EF0065C191 /* AddMeal.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB1523EA24FF49EF0065C191 /* AddMeal.swift */; };
 		AB42211F24F59B8F00BDAE91 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = AB42211E24F59B8F00BDAE91 /* GoogleService-Info.plist */; };
-		AB43D35924F4C88600BFB478 /* 30180-calendar-icon.json in Resources */ = {isa = PBXBuildFile; fileRef = AB43D35824F4C88600BFB478 /* 30180-calendar-icon.json */; };
-		AB43D35D24F4C8FB00BFB478 /* BuildFile in Frameworks */ = {isa = PBXBuildFile; productRef = AB43D35C24F4C8FB00BFB478 /* SwiftPackageProductDependency */; };
+		AB43D35924F4C88600BFB478 /* calendar.json in Resources */ = {isa = PBXBuildFile; fileRef = AB43D35824F4C88600BFB478 /* calendar.json */; };
+		AB43D35D24F4C8FB00BFB478 /* Lottie in Frameworks */ = {isa = PBXBuildFile; productRef = AB43D35C24F4C8FB00BFB478 /* Lottie */; };
 		AB43D35F24F4C93800BFB478 /* LottieView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB43D35E24F4C93800BFB478 /* LottieView.swift */; };
 		AB43D36224F4C98600BFB478 /* success.json in Resources */ = {isa = PBXBuildFile; fileRef = AB43D36024F4C98600BFB478 /* success.json */; };
 		AB43D36324F4C98600BFB478 /* loading.json in Resources */ = {isa = PBXBuildFile; fileRef = AB43D36124F4C98600BFB478 /* loading.json */; };
 		AB43D36524F4CA3800BFB478 /* LoadingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB43D36424F4CA3800BFB478 /* LoadingView.swift */; };
+		AB4EBFDB24FC25D30057D8D6 /* ElegantCalendar.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AB4EBFDA24FC25D30057D8D6 /* ElegantCalendar.xcassets */; };
+		AB4EBFEC24FC3B780057D8D6 /* AddSheet.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB4EBFEB24FC3B780057D8D6 /* AddSheet.swift */; };
+		AB4EBFEE24FC51780057D8D6 /* EatStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB4EBFED24FC51780057D8D6 /* EatStore.swift */; };
+		AB4EBFF024FCD4450057D8D6 /* SettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB4EBFEF24FCD4450057D8D6 /* SettingsView.swift */; };
+		AB9D8E8624FCE2F300D9D8FA /* SDWebImageSwiftUI in Frameworks */ = {isa = PBXBuildFile; productRef = AB9D8E8524FCE2F300D9D8FA /* SDWebImageSwiftUI */; };
+		AB9D8E8824FCE44600D9D8FA /* SwipeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB9D8E8724FCE44600D9D8FA /* SwipeView.swift */; };
+		AB9D8E8A24FF023F00D9D8FA /* PickedMealsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB9D8E8924FF023F00D9D8FA /* PickedMealsView.swift */; };
+		ABA5ED7A24F7360800946A9F /* ShoppingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABA5ED7924F7360800946A9F /* ShoppingView.swift */; };
+		ABA5ED7C24F7362D00946A9F /* ShoppingRunView.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABA5ED7B24F7362D00946A9F /* ShoppingRunView.swift */; };
+		ABA5ED7E24F736C300946A9F /* ItemStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABA5ED7D24F736C300946A9F /* ItemStore.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -46,14 +56,23 @@
 		AB069BA624F3609E001A777B /* MealPlannerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MealPlannerView.swift; sourceTree = "<group>"; };
 		AB069BA824F36119001A777B /* MealDetail.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MealDetail.swift; sourceTree = "<group>"; };
 		AB069BAA24F36138001A777B /* MealStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MealStore.swift; sourceTree = "<group>"; };
-		AB069BAC24F476F1001A777B /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
 		AB069BAE24F47740001A777B /* TabBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBar.swift; sourceTree = "<group>"; };
+		AB1523EA24FF49EF0065C191 /* AddMeal.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddMeal.swift; sourceTree = "<group>"; };
 		AB42211E24F59B8F00BDAE91 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
-		AB43D35824F4C88600BFB478 /* 30180-calendar-icon.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = "30180-calendar-icon.json"; sourceTree = "<group>"; };
+		AB43D35824F4C88600BFB478 /* calendar.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = calendar.json; sourceTree = "<group>"; };
 		AB43D35E24F4C93800BFB478 /* LottieView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LottieView.swift; sourceTree = "<group>"; };
 		AB43D36024F4C98600BFB478 /* success.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = success.json; sourceTree = "<group>"; };
 		AB43D36124F4C98600BFB478 /* loading.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = loading.json; sourceTree = "<group>"; };
 		AB43D36424F4CA3800BFB478 /* LoadingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadingView.swift; sourceTree = "<group>"; };
+		AB4EBFDA24FC25D30057D8D6 /* ElegantCalendar.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; name = ElegantCalendar.xcassets; path = "../../../../../../Library/Developer/Xcode/DerivedData/Mukja-gdmmckvqfwcoxjgxfurzfjflixcv/SourcePackages/checkouts/ElegantCalendar/ElegantCalendar.xcassets"; sourceTree = "<group>"; };
+		AB4EBFEB24FC3B780057D8D6 /* AddSheet.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddSheet.swift; sourceTree = "<group>"; };
+		AB4EBFED24FC51780057D8D6 /* EatStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EatStore.swift; sourceTree = "<group>"; };
+		AB4EBFEF24FCD4450057D8D6 /* SettingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsView.swift; sourceTree = "<group>"; };
+		AB9D8E8724FCE44600D9D8FA /* SwipeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwipeView.swift; sourceTree = "<group>"; };
+		AB9D8E8924FF023F00D9D8FA /* PickedMealsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PickedMealsView.swift; sourceTree = "<group>"; };
+		ABA5ED7924F7360800946A9F /* ShoppingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShoppingView.swift; sourceTree = "<group>"; };
+		ABA5ED7B24F7362D00946A9F /* ShoppingRunView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShoppingRunView.swift; sourceTree = "<group>"; };
+		ABA5ED7D24F736C300946A9F /* ItemStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemStore.swift; sourceTree = "<group>"; };
 		B34CC8FFA85BEC2960303DAE /* Pods_Mukja.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Mukja.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -62,7 +81,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				AB43D35D24F4C8FB00BFB478 /* BuildFile in Frameworks */,
+				AB9D8E8624FCE2F300D9D8FA /* SDWebImageSwiftUI in Frameworks */,
+				AB43D35D24F4C8FB00BFB478 /* Lottie in Frameworks */,
 				4D934B19C015AF549F4A0A09 /* Pods_Mukja.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -84,13 +104,13 @@
 				9CF44560616A691235275AC6 /* Pods-Mukja.debug.xcconfig */,
 				0EEB3A2B702434ABB245C9F2 /* Pods-Mukja.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
 		AB069B8124F19292001A777B = {
 			isa = PBXGroup;
 			children = (
+				AB4EBFDA24FC25D30057D8D6 /* ElegantCalendar.xcassets */,
 				AB069B8C24F19292001A777B /* Mukja */,
 				AB069B8B24F19292001A777B /* Products */,
 				AA4A3A9E95385290CE5446FC /* Pods */,
@@ -111,12 +131,20 @@
 			children = (
 				AB069B8D24F19293001A777B /* AppDelegate.swift */,
 				AB069B8F24F19293001A777B /* SceneDelegate.swift */,
-				AB069B9424F19293001A777B /* ContentView.swift */,
-				AB069BAC24F476F1001A777B /* HomeView.swift */,
 				AB069BAE24F47740001A777B /* TabBar.swift */,
-				AB069BA624F3609E001A777B /* MealPlannerView.swift */,
+				AB069B9424F19293001A777B /* ContentView.swift */,
+				ABA5ED7924F7360800946A9F /* ShoppingView.swift */,
+				AB4EBFEF24FCD4450057D8D6 /* SettingsView.swift */,
+				AB9D8E8724FCE44600D9D8FA /* SwipeView.swift */,
+				AB9D8E8924FF023F00D9D8FA /* PickedMealsView.swift */,
 				AB069BA824F36119001A777B /* MealDetail.swift */,
+				ABA5ED7B24F7362D00946A9F /* ShoppingRunView.swift */,
+				AB4EBFEB24FC3B780057D8D6 /* AddSheet.swift */,
+				AB1523EA24FF49EF0065C191 /* AddMeal.swift */,
+				ABA5ED7D24F736C300946A9F /* ItemStore.swift */,
+				AB069BA624F3609E001A777B /* MealPlannerView.swift */,
 				AB069BAA24F36138001A777B /* MealStore.swift */,
+				AB4EBFED24FC51780057D8D6 /* EatStore.swift */,
 				AB069BA424F3556A001A777B /* ItemDetail.swift */,
 				AB43D35E24F4C93800BFB478 /* LottieView.swift */,
 				AB43D36424F4CA3800BFB478 /* LoadingView.swift */,
@@ -144,7 +172,7 @@
 			children = (
 				AB43D36124F4C98600BFB478 /* loading.json */,
 				AB43D36024F4C98600BFB478 /* success.json */,
-				AB43D35824F4C88600BFB478 /* 30180-calendar-icon.json */,
+				AB43D35824F4C88600BFB478 /* calendar.json */,
 			);
 			path = Lottie;
 			sourceTree = "<group>";
@@ -168,7 +196,8 @@
 			);
 			name = Mukja;
 			packageProductDependencies = (
-				AB43D35C24F4C8FB00BFB478 /* SwiftPackageProductDependency */,
+				AB43D35C24F4C8FB00BFB478 /* Lottie */,
+				AB9D8E8524FCE2F300D9D8FA /* SDWebImageSwiftUI */,
 			);
 			productName = Mukja;
 			productReference = AB069B8A24F19292001A777B /* Mukja.app */;
@@ -199,7 +228,8 @@
 			);
 			mainGroup = AB069B8124F19292001A777B;
 			packageReferences = (
-				AB43D35B24F4C8FB00BFB478 /* RemoteSwiftPackageReference */,
+				AB43D35B24F4C8FB00BFB478 /* XCRemoteSwiftPackageReference "lottie-ios" */,
+				AB9D8E8424FCE2F300D9D8FA /* XCRemoteSwiftPackageReference "SDWebImageSwiftUI" */,
 			);
 			productRefGroup = AB069B8B24F19292001A777B /* Products */;
 			projectDirPath = "";
@@ -215,10 +245,11 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				AB4EBFDB24FC25D30057D8D6 /* ElegantCalendar.xcassets in Resources */,
 				AB43D36224F4C98600BFB478 /* success.json in Resources */,
 				AB069B9D24F19296001A777B /* LaunchScreen.storyboard in Resources */,
 				AB43D36324F4C98600BFB478 /* loading.json in Resources */,
-				AB43D35924F4C88600BFB478 /* 30180-calendar-icon.json in Resources */,
+				AB43D35924F4C88600BFB478 /* calendar.json in Resources */,
 				AB069B9A24F19296001A777B /* Preview Assets.xcassets in Resources */,
 				AB069B9724F19296001A777B /* Assets.xcassets in Resources */,
 				AB42211F24F59B8F00BDAE91 /* GoogleService-Info.plist in Resources */,
@@ -274,16 +305,24 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				AB069BAD24F476F1001A777B /* HomeView.swift in Sources */,
+				AB4EBFEE24FC51780057D8D6 /* EatStore.swift in Sources */,
 				AB069B9324F19293001A777B /* Mukja.xcdatamodeld in Sources */,
+				ABA5ED7A24F7360800946A9F /* ShoppingView.swift in Sources */,
 				AB069B8E24F19293001A777B /* AppDelegate.swift in Sources */,
 				AB069B9524F19293001A777B /* ContentView.swift in Sources */,
+				AB4EBFF024FCD4450057D8D6 /* SettingsView.swift in Sources */,
 				AB069BA924F36119001A777B /* MealDetail.swift in Sources */,
+				AB4EBFEC24FC3B780057D8D6 /* AddSheet.swift in Sources */,
+				AB1523EB24FF49EF0065C191 /* AddMeal.swift in Sources */,
 				AB43D36524F4CA3800BFB478 /* LoadingView.swift in Sources */,
 				AB069BA524F3556A001A777B /* ItemDetail.swift in Sources */,
+				AB9D8E8A24FF023F00D9D8FA /* PickedMealsView.swift in Sources */,
+				ABA5ED7E24F736C300946A9F /* ItemStore.swift in Sources */,
 				AB069BA724F3609E001A777B /* MealPlannerView.swift in Sources */,
 				AB069BAB24F36138001A777B /* MealStore.swift in Sources */,
+				ABA5ED7C24F7362D00946A9F /* ShoppingRunView.swift in Sources */,
 				AB069B9024F19293001A777B /* SceneDelegate.swift in Sources */,
+				AB9D8E8824FCE44600D9D8FA /* SwipeView.swift in Sources */,
 				AB43D35F24F4C93800BFB478 /* LottieView.swift in Sources */,
 				AB069BAF24F47740001A777B /* TabBar.swift in Sources */,
 			);
@@ -485,7 +524,7 @@
 /* End XCConfigurationList section */
 
 /* Begin XCRemoteSwiftPackageReference section */
-		AB43D35B24F4C8FB00BFB478 /* RemoteSwiftPackageReference */ = {
+		AB43D35B24F4C8FB00BFB478 /* XCRemoteSwiftPackageReference "lottie-ios" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/airbnb/lottie-ios.git";
 			requirement = {
@@ -493,13 +532,26 @@
 				minimumVersion = 3.1.8;
 			};
 		};
+		AB9D8E8424FCE2F300D9D8FA /* XCRemoteSwiftPackageReference "SDWebImageSwiftUI" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/SDWebImage/SDWebImageSwiftUI.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 1.5.0;
+			};
+		};
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
-		AB43D35C24F4C8FB00BFB478 /* SwiftPackageProductDependency */ = {
+		AB43D35C24F4C8FB00BFB478 /* Lottie */ = {
 			isa = XCSwiftPackageProductDependency;
-			package = AB43D35B24F4C8FB00BFB478 /* RemoteSwiftPackageReference */;
+			package = AB43D35B24F4C8FB00BFB478 /* XCRemoteSwiftPackageReference "lottie-ios" */;
 			productName = Lottie;
+		};
+		AB9D8E8524FCE2F300D9D8FA /* SDWebImageSwiftUI */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = AB9D8E8424FCE2F300D9D8FA /* XCRemoteSwiftPackageReference "SDWebImageSwiftUI" */;
+			productName = SDWebImageSwiftUI;
 		};
 /* End XCSwiftPackageProductDependency section */
 

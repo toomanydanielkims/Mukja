@@ -7,11 +7,17 @@
 //
 
 import SwiftUI
+import Firebase
+import SDWebImageSwiftUI
 
 struct MealPlannerView: View {
     @ObservedObject var store = MealStore()
     
     @State private var tap = false
+    @State var showingSheet = false
+    @State var itemAddedFeedback = false
+    
+    @Binding var tabSelection: Int
     
     func addMeal() {
         store.meals.append(Meal(title: "nothing", icon: "none", suggester: "nobody", color: "ssBlue"))
@@ -25,7 +31,7 @@ struct MealPlannerView: View {
             NavigationView {
                 List {
                     ForEach(store.meals) { meal in
-                        NavigationLink(destination: MealDetail(meal: meal)) {
+                        NavigationLink(destination: PickedMealsView(tabSelection: self.$tabSelection)) {
                             HStack(alignment: .center) {
                                 MealPlannerRow(title: meal.title, image: meal.image, suggester: meal.suggester, color: meal.color)
 
@@ -47,15 +53,35 @@ struct MealPlannerView: View {
                     UITableView.appearance().backgroundColor = UIColor(cgColor: #colorLiteral(red: 0.9764705882, green: 0.9607843137, blue: 0.8431372549, alpha: 1))
                     UITableViewCell.appearance().selectionStyle = .none
                 }
+                .navigationBarBackButtonHidden(true)
                 .navigationBarTitle(Text("Meal Planner"))
               //  .accentColor(Color("ssBlue"))
-                .navigationBarItems(leading: Button(action: addMeal) {
-                    Text("+")
-                }, trailing: EditButton())
+                .navigationBarItems(
+                    trailing: HStack {
+                        EditButton()
+                        Button(action: {
+                            self.itemAddedFeedback = false
+                            self.showingSheet = true }) {
+                            Text("+")
+                        }
+                        .sheet(isPresented: $showingSheet) {
+                            AddSheet(showingSheet: self.$showingSheet, itemAddedFeedback: self.$itemAddedFeedback)
+                            }
+                    }
+                )
                 .foregroundColor(Color("ssBlue"))
             }
             .buttonStyle(PlainButtonStyle())
+            .navigationBarBackButtonHidden(true)
+            
+            if itemAddedFeedback {
+                LoadingView()
+                .zIndex(2)
+                .animation(.easeInOut)
+            }
+            
         }
+        
     }
 }
 
@@ -63,7 +89,7 @@ struct MealPlannerView: View {
 
 struct MealPlannerView_Previews: PreviewProvider {
     static var previews: some View {
-        MealPlannerView()
+        MealPlannerView(tabSelection: .constant(2))
     }
 }
 
@@ -128,4 +154,39 @@ struct MealPlannerRow: View {
             .cornerRadius(15)
         }
     }
+}
+
+class observer2 : ObservableObject{
+    
+    @Published var data = [pickeddata2]()
+    
+    init() {
+        
+        let db = Firestore.firestore()
+        db.collection("liked").getDocuments { (snap, err) in
+            
+            if err != nil{
+                
+                print((err?.localizedDescription)!)
+                return
+            }
+            
+            for i in snap!.documents{
+                
+                let name = i.get("name") as! String
+                let type = i.get("type") as! String
+                let image = i.get("image") as! String
+                
+                self.data.append(pickeddata2(name: name, type: type, image: image, id: UUID().uuidString))
+            }
+        }
+    }
+}
+
+struct pickeddata2 : Identifiable {
+    
+    var name : String
+    var type : String
+    var image : String
+    var id  : String
 }

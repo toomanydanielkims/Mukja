@@ -9,26 +9,31 @@
 import SwiftUI
 
 struct MealDetail: View {
-    var meal: Meal = mealData[0]
     
-    var body: some View {
-        List {
-            VStack(spacing: 20.0) {
-                Image(meal.image)
-                .resizable()
-                    .aspectRatio(contentMode: .fit)
-                    .frame(maxWidth: .infinity)
-                Text(meal.title)
-                    .frame(maxWidth: .infinity, alignment: .leading)
+    @ObservedObject var datas = observer1()
+    
+    var meal: pickeddata1
+        
+    
+        var body: some View {
+            List {
+                VStack(spacing: 20) {
+                    Image(meal.image)
+                        .resizable()
+                        .aspectRatio(contentMode: .fit)
+                        .frame(maxWidth: .infinity)
+                    Text(meal.name)
+                        .frame(maxWidth: .infinity, alignment: .leading)
+                }
+                .navigationBarTitle(meal.name)
             }
-            .navigationBarTitle(meal.title)
+            .listStyle(PlainListStyle())
         }
-    .listStyle(GroupedListStyle())
-    }
 }
 
-struct MealDetail_Previews: PreviewProvider {
-    static var previews: some View {
-        MealDetail()
-    }
-}
+
+//struct MealDetail_Previews: PreviewProvider {
+//    static var previews: some View {
+//        MealDetail(meal: .constant())
+//    }
+//}

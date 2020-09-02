@@ -10,58 +10,78 @@ import SwiftUI
 
 struct ContentView: View {
     
-    @State private var isLoading = false
+   // @State private var hideBar = true
+    
+//    @State private var isLoading = false
+  //  @State private var selection: String? = nil
+    @Binding var tabSelection: Int
+    
     
     var body: some View {
-        ZStack {
-            
-            ScrollView {
-                
-                HStack {
-                    Spacer()
-                    Text("Aug 9")
-                        .foregroundColor(Color("ssOrange"))
-                    Rectangle()
-                        .foregroundColor(Color("ssOrange"))
-                        .frame(width: 62, height: 44)
-                        .cornerRadius(10)
-                        .padding(.leading)
-                }
-                .padding(.vertical, 44)
-                .offset(x: -30, y: -30)
-                .zIndex(3)
-                
-                Color("ssYellow")
-                    .frame(width: screen.width, height: (screen.height * 0.45))
-                    .edgesIgnoringSafeArea(.all)
-                    .offset(y: -225)
+            ZStack {
+//                NavigationLink(destination: MealPlannerView( tabSelection: $tabSelection), tag: "MealPlannerView", selection: $selection) { EmptyView() }
+                        
+                        ScrollView {
+                            
+                            HStack {
+                                Spacer()
+                                Text("Aug 9")
+                                    .foregroundColor(Color("ssOrange"))
+                                Rectangle()
+                                    .foregroundColor(Color("ssOrange"))
+                                    .frame(width: 62, height: 44)
+                                    .cornerRadius(10)
+                                    .padding(.leading)
+                                    }
+                            .padding(.vertical, 44)
+                            .offset(x: -30, y: -30)
+                            .zIndex(3)
+                            
+                            Image("kitchentable01")
+                                .renderingMode(.original)
+                                .resizable()
+                                .frame(width: screen.width, height: (screen.height * 0.45))
+                                .clipShape(RoundedRectangle(cornerRadius: 30, style: .continuous))
+                                .edgesIgnoringSafeArea(.all)
+                                .offset(y: -200)
 
-                MealCard()
-                    .zIndex(3)
-                    .offset(y: -400)
-                    .onTapGesture {
-                        self.isLoading.toggle()
-                }
-                
-                HorizontalScrollView()
-                    .offset(y: -375)
-                
-                ShoppingList()
-                    .offset(y: -350)
-                
-            }
-            if isLoading {
-                LoadingView()
-                animation(.easeInOut)
-            }
-        }
+                            MealCard()
+                                .zIndex(3)
+                                .offset(y: -400)
+//                                .onTapGesture {
+//                                    self.isLoading.toggle()
+//                                    }
+                            
+                            HorizontalScrollView(tabSelection: $tabSelection)
+                                .offset(y: -375)
+                            
+                            ShoppingList(tabSelection: $tabSelection)
+                                .offset(y: -350)
+                                .onTapGesture {
+//                                    self.selection = "MealPlannerView"
+//                                    self.hideBar = false
+                                    self.tabSelection = 2
+                            }
+
+            //            if isLoading {
+            //                LoadingView()
+            //                animation(.easeInOut)
+            //            }
+                        }
+                    }
+//        .navigationBarTitle("Mukja")
+//        .navigationBarHidden(hideBar)
+//        .onAppear {
+//                self.hideBar = true
+//            }
+  //  .statusBar(hidden: true)
     }
 }
 
 
 struct ContentView_Previews: PreviewProvider {
     static var previews: some View {
-        ContentView()
+        ContentView(tabSelection: .constant(1))
     }
 }
 
@@ -87,7 +107,7 @@ struct MealCard: View {
                         .zIndex(0)
                 }
                 Text("are enjoying")
-                    .font(.system(size: 15, weight: .bold))
+                    .font(.system(size: 15, weight: .regular))
                     .foregroundColor(Color("ssNavy"))
                     .offset(x: -20)
                 Spacer()
@@ -142,7 +162,7 @@ struct MealRowView: View {
                         .frame(width: width, alignment: .leading)
                         .foregroundColor(.white)
     //                Spacer()
-    //                Image(meal.icon)
+    //                Image(meal.icon)  
                 }
 
     //            meal.icon
@@ -163,14 +183,20 @@ struct MealRowView: View {
 }
 
 struct HorizontalScrollView: View {
+    
+    @Binding var tabSelection: Int
+    
     var body: some View {
         VStack(alignment: .leading, spacing: 16.0) {
 
             HStack {
                 HStack(alignment: .center) {
-                    Text("Upcoming Meals >")
-                        .font(.system(size: 18, weight: .bold))
-                        .foregroundColor(Color("ssNavy")) }
+                            Text("Upcoming Meals >")
+                                .font(.system(size: 18, weight: .bold))
+                                .foregroundColor(Color("ssNavy"))
+                } .onTapGesture {
+                    self.tabSelection = 2
+                }
                 Spacer()
             }.frame(width: 300, height: 44)
             
@@ -189,23 +215,6 @@ struct HorizontalScrollView: View {
 
 
 // MARK: - Vertical List
-
-struct ShoppingItem: Identifiable, Codable {
-    var id = UUID()
-    var title: String
-    var suggester: String
-    var selected: Bool
-    var count: Int
-    var counter: String
-    var image = "food"
-}
-
-let shoppingList = [
-    ShoppingItem(title: "celery", suggester: "mom", selected: false, count: 2, counter: "bundles"),
-    ShoppingItem(title: "pasta", suggester: "sister", selected: false, count: 4, counter: "packs"),
-    ShoppingItem(title: "water", suggester: "me", selected: false, count: 24, counter: "bottles")
-    
-]
 
 struct ShoppingRowView: View {
     var item: ShoppingItem
@@ -229,6 +238,9 @@ struct ShoppingRowView: View {
 }
 
 struct ShoppingList: View {
+    
+    @Binding var tabSelection: Int
+    
     var body: some View {
         VStack (alignment: .leading, spacing: 16.0) {
             
@@ -236,7 +248,11 @@ struct ShoppingList: View {
                 HStack(alignment: .center) {
                     Text("Shopping List >")
                         .font(.system(size: 18, weight: .bold))
-                        .foregroundColor(Color("ssNavy")) }
+                        .foregroundColor(Color("ssNavy"))
+                }
+                .onTapGesture {
+                    self.tabSelection = 2
+                }
                 Spacer()
             }.frame(width: 300, height: 44)
             

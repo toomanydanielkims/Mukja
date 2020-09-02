@@ -11,7 +11,7 @@ import SwiftUI
 struct LoadingView: View {
     var body: some View {
         VStack {
-            LottieView(filename: "30180-calendar-icon")
+            LottieView(filename: "loading")
                 .frame(width: 200, height: 200)
         }
     }
